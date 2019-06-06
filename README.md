@@ -13,13 +13,13 @@ This project is a being provided as a sample only which illustrates how to [enab
 * Update `config.json` and include your new personal access token in the `accessToken` value. 
 
 ### Calling this script to enable security alerts
-* At the commandline, run `node enable-security-alerts-for-org.js myorgname` where `myorgname` is your organization. This will enable security alerts on all private repositories in your organization.
+* At the commandline, run `node enable-security-alerts-for-org.js myorgname` where `myorgname` is your organization. This will enable security alerts on all repositories in your organization.
 
 ### Calling this script to enable automated security fixes
 
 **You'll need to enable security alerts before you can enable automated security fixes**
 
-* At the commandline, run `node enable-automated-security-fixes-for-org.js myorgname` where `myorgname` is your organization. This will enable security alerts on all private repositories in your organization.
+* At the commandline, run `node enable-automated-security-fixes-for-org.js myorgname` where `myorgname` is your organization. This will enable security alerts on all repositories in your organization.
 
 ## Shell script
 
