@@ -10,7 +10,7 @@ This project is a being provided as a sample only which illustrates how to [enab
 * Clone this repository
 * At the commandline, run `npm install`
 * [Generate a new personal access token](https://github.com/settings/tokens) with `repo` and `read:org` permissions
-* Update `config.json` and include your new personal access token in the `accessToken` value. 
+* Copy `.env.example` to `.env` and include your new personal access token in the `GH_AUTH_TOKEN` value.
 
 ### Calling this script to enable security alerts
 * At the commandline, run `node enable-security-alerts-for-org.js myorgname` where `myorgname` is your organization. This will enable security alerts on all repositories in your organization.
