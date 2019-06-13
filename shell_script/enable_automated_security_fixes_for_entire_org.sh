@@ -12,15 +12,24 @@ command -v jq >/dev/null 2>&1 || { echo >&2 "Error: This script requires the 'jq
 
 org_name=$1
 api_key=$2
+i=1
 
-repo_url="https://api.github.com/orgs/$org_name/repos"
+while :
+do
+  echo "Getting repository IDs for org $org_name. Page $i"
+  repo_url="https://api.github.com/orgs/$org_name/repos?page=$i&per_page=30"
+  repo_ids=($(curl -s -H "Authorization: bearer $api_key" $repo_url | jq ".[].id"))
+  if [ "${#repo_ids[@]}" -eq "0" ];
+  then 
+    break
+  fi
+  echo "Retrieved ${#repo_ids[@]} repo IDs for org $org_name"
 
-echo "Getting all repository IDs for org $org_name"
-repo_ids=($(curl -s -H "Authorization: bearer $api_key" $repo_url | jq ".[].id"))
-echo "Retrieved ${#repo_ids[@]} repo IDs for org $org_name"
-
-for repo_id in ${repo_ids[@]}; do
-  echo "Enabling automated security fixes for repository id: $repo_id"
+  for repo_id in ${repo_ids[@]}; do
+    echo "Enabling automated security fixes for repository id: $repo_id"
   enable_url="https://api.github.com/repositories/$repo_id/automated-security-fixes"
-  curl -s -X PUT -H "Authorization: bearer $api_key" -H "Accept: application/vnd.github.london-preview+json" $enable_url
+  curl -s -X PUT -H "Authorization: bearer $api_key" -H "Accept: application/vnd.github.london-preview+json" $enable_url  
+  done
+  
+  i=$((i+1))
 done
