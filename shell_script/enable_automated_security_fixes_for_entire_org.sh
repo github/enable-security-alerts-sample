@@ -27,8 +27,9 @@ do
 
   for repo_id in ${repo_ids[@]}; do
     echo "Enabling automated security fixes for repository id: $repo_id"
-  enable_url="https://api.github.com/repositories/$repo_id/automated-security-fixes"
-  curl -s -X PUT -H "Authorization: bearer $api_key" -H "Accept: application/vnd.github.london-preview+json" $enable_url  
+    enable_url="https://api.github.com/repositories/$repo_id/automated-security-fixes"
+    curl -s -X PUT -H "Authorization: bearer $api_key" -H "Accept: application/vnd.github.london-preview+json" $enable_url
+    sleep 1 #rate limiting to prevent blocking by github server
   done
   
   i=$((i+1))
