@@ -1,7 +1,7 @@
 # Enable security alerts and automated security fixes sample
 This repository contains sample scripts for Node and Bash which can be used to enable security alerts and automated security fixes in all of the repositories in a given organization. 
 
-This project is a being provided as a sample only which illustrates how to [enable vulnerability alerts](https://developer.github.com/v3/repos/#enable-vulnerability-alerts) and [enable automated security fixes](https://developer.github.com/v3/repos/#enable-automated-security-fixes) in all repositories in a given organization.
+This project is being provided as a sample only which illustrates how to [enable vulnerability alerts](https://developer.github.com/v3/repos/#enable-vulnerability-alerts) and [enable automated security fixes](https://developer.github.com/v3/repos/#enable-automated-security-fixes) in all repositories in a given organization.
 
 ## Node script
 
