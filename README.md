@@ -5,6 +5,8 @@ This project is being provided as a sample only which illustrates how to [enable
 
 ## Node script
 
+_See also: the [`ghad`](https://github.com/18F/ghad) command line tool._
+
 ### Prerequisites
 * Install [Node](https://nodejs.org/en/)
 * Clone this repository
