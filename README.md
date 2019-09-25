@@ -5,7 +5,7 @@ This project is being provided as a sample only which illustrates how to [enable
 
 ## Node script
 
-_See also: the [`ghad`](https://github.com/18F/ghad) command line tool._
+Note: This node script is also available integrated into the [GitHub Administration Tool (`ghad`)](https://github.com/18F/ghad).
 
 ### Prerequisites
 * Install [Node](https://nodejs.org/en/)
