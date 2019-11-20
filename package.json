@@ -9,7 +9,7 @@
   "author": "GitHub",
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^16.28.0",
+    "@octokit/rest": "^16.28.3",
     "dotenv": "^8.0.0"
   }
 }
