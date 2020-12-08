@@ -13,8 +13,8 @@ const owner = args
 const options = octokit.repos.listForOrg.endpoint.merge({ org: owner, type: 'all' })
 const RequestPromises = []
 
-octokit
-  .paginate(options)
+octokit(options)
+  //.paginate(options)
   .then(repositories => {
     for (const repository of repositories) {
       if (!repository.archived) {
@@ -23,9 +23,23 @@ octokit
           owner,
           repo
         }).then(response => {
-          return true
+          const o = {
+            name: repository.name,
+            archived: repository.archived,
+            visibility: repository.visiblity,
+            alerts: true
+          };
+          console.log(o);
+          return o;
         }).catch(error => {
-          return `${owner}/${repo}`
+          const o = {
+            name: repository.name,
+            archived: repository.archived,
+            visibility: repository.visiblity,
+            alerts: false
+          };
+          console.log(o);
+          return o;
         }))
       }
     }
