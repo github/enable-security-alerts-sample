@@ -1,7 +1,7 @@
-# Enable security alerts and automated security fixes sample
+# Enable Dependabot alerts and Dependabot security updates sample
 This repository contains sample scripts for Node and Bash which can be used to enable security alerts and automated security fixes in all of the repositories in a given organization.
 
-This project is being provided as a sample only which illustrates how to [enable vulnerability alerts](https://developer.github.com/v3/repos/#enable-vulnerability-alerts) and [enable automated security fixes](https://developer.github.com/v3/repos/#enable-automated-security-fixes) in all repositories in a given organization.
+This project is being provided as a sample only which illustrates how to [enable Dependabot alerts](https://developer.github.com/v3/repos/#enable-vulnerability-alerts) and [enable Dependabot security updates](https://developer.github.com/v3/repos/#enable-automated-security-fixes) in all repositories in a given organization.
 
 ## Node script
 
@@ -14,17 +14,17 @@ Note: This node script is also available integrated into the [GitHub Administrat
 * [Generate a new personal access token](https://github.com/settings/tokens) with `repo` and `read:org` permissions
 * Copy `.env.example` to `.env` and include your new personal access token in the `GH_AUTH_TOKEN` value.
 
-### Calling this script to enable security alerts
-* At the commandline, run `node enable-security-alerts-for-org.js myorgname` where `myorgname` is your organization. This will enable security alerts on all repositories in your organization.
+### Calling this script to enable Dependabot alerts
+* At the commandline, run `node enable-security-alerts-for-org.js myorgname` where `myorgname` is your organization. This will enable Dependabot alerts on all repositories in your organization.
 
-### Calling this script to check for enabled security alerts
-* At the commandline, run `node enable-security-alerts-for-org-check.js myorgname` where `myorgname` is your organization. This will enable security alerts on all repositories in your organization.
+### Calling this script to check for enabled Dependabot alerts
+* At the commandline, run `node enable-security-alerts-for-org-check.js myorgname` where `myorgname` is your organization. This will enable Dependabot alerts on all repositories in your organization.
 
-### Calling this script to enable automated security fixes
+### Calling this script to enable Dependabot security updates
 
-**You'll need to enable security alerts before you can enable automated security fixes**
+**You'll need to enable security alerts before you can Dependabot security updates**
 
-* At the commandline, run `node enable-automated-security-fixes-for-org.js myorgname` where `myorgname` is your organization. This will enable security alerts on all repositories in your organization.
+* At the commandline, run `node enable-automated-security-fixes-for-org.js myorgname` where `myorgname` is your organization. This will enable Dependabot security updates on all repositories in your organization.
 
 ## Shell script
 
@@ -32,12 +32,12 @@ Note: This node script is also available integrated into the [GitHub Administrat
 * Ensure that you have `bash` shell available on your system. If you're running Windows, additional setup may be required. [How to install Bash on Windows 10](https://www.windowscentral.com/how-install-bash-shell-command-line-windows-10)
 * [Generate a new personal access token](https://github.com/settings/tokens) with `repo` and `read:org` permissions
 
-### Calling this script to enable security alerts
+### Calling this script to enable Dependabot alerts
 * At the commandline, run `./shell_script/enable_vulnerability_alerts_for_entire_org.sh myorgname accessToken` where `myorgname` is your organization, and `accessToken` is the personal access token you generated earlier.
 
-### Calling this script to enable automated security fixes
+### Calling this script to enable Dependabot security updates
 
-**You'll need to enable security alerts before you can enable automated security fixes**
+**You'll need to enable Dependabot alerts before you can enable Dependabot security updates**
 
 * At the commandline, run `./shell_script/enable_automated_security_fixes_for_entire_org.sh myorgname accessToken` where `myorgname` is your organization, and `accessToken` is the personal access token you generated earlier.
 
