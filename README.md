@@ -1,3 +1,12 @@
+> [!WARNING]
+> ### This repository has been deprecated and is no longer maintained
+>
+> The features of the scripts are now natively supported in GitHub, please explore the following options:
+> - [Configuring global Dependabot settings](https://docs.github.com/en/code-security/securing-your-organization/enabling-security-features-in-your-organization/configuring-global-security-settings-for-your-organization#configuring-global-dependabot-settings)
+> - [Managing Dependabot alerts for your organization](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/configuring-dependabot-alerts#managing-dependabot-alerts-for-your-organization)
+> - [Choosing a custom security configuration](https://docs.github.com/en/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/choosing-a-security-configuration-for-your-repositories#choosing-a-custom-security-configuration)
+> - [Applying the GitHub-recommended security configuration to all repositories in your organization](https://docs.github.com/en/code-security/securing-your-organization/enabling-security-features-in-your-organization/applying-the-github-recommended-security-configuration-in-your-organization#applying-the-github-recommended-security-configuration-to-all-repositories-in-your-organization)
+
 # Enable Dependabot alerts and Dependabot security updates sample
 This repository contains sample scripts for Node and Bash which can be used to enable security alerts and automated security fixes in all of the repositories in a given organization.
 
